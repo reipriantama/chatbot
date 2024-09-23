@@ -35,21 +35,21 @@ export function Chatbot() {
                 <div className="p-2 border border-gray-700 rounded-full" >
                   <Image src="/ai.png" alt="AI" width={40} height={40} />
                 </div>
-                <div className="bg-muted rounded-lg p-3 max-w-[90%]">
+                <p className="bg-muted rounded-lg p-3 max-w-[90%]">
                   {/* <p className="text-sm text-muted-foreground">
                     {messages.content}
                   </p> */}
-                  <Markdown className="text-sm text-muted-foreground">{messages.content}</Markdown>
-                </div>
+                  <Markdown className="text-sm text-muted-foreground whitespace-pre-wrap overflow-x-auto">{messages.content}</Markdown>
+                </p>
               </div>
             ) : (
               <div
                 key={messages.id}
                 className="flex justify-end">
                 <div className="bg-primary rounded-lg p-3 max-w-[90%]">
-                  <pre className="text-sm text-primary-foreground overflow-x-auto">
+                  <p className="text-sm text-primary-foreground whitespace-pre-wrap overflow-x-auto">
                     {messages.content}
-                  </pre>
+                  </p>
                 </div>
               </div>
             )
